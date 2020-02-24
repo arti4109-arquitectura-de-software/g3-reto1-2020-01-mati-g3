@@ -1,0 +1,37 @@
+--------------------------------------------------------
+-- Archivo creado  - sábado-febrero-22-2020   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Table PRODUCTO
+--------------------------------------------------------
+
+  CREATE TABLE "TIANGUIX"."PRODUCTO" 
+   (	"ID" VARCHAR2(20 BYTE), 
+	"DESCRIPCION" VARCHAR2(200 BYTE)
+   ) PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index PRODUCTO_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "TIANGUIX"."PRODUCTO_PK" ON "TIANGUIX"."PRODUCTO" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  Constraints for Table PRODUCTO
+--------------------------------------------------------
+
+  ALTER TABLE "TIANGUIX"."PRODUCTO" ADD CONSTRAINT "PRODUCTO_PK" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+ 
+  ALTER TABLE "TIANGUIX"."PRODUCTO" MODIFY ("ID" NOT NULL ENABLE);
+ 
+  ALTER TABLE "TIANGUIX"."PRODUCTO" MODIFY ("DESCRIPCION" NOT NULL ENABLE);
+
